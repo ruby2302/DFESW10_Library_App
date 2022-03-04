@@ -16,7 +16,7 @@ public class BookService {
 	}
 	
 	public Book addBook(Book book) {
-		return this.repo.save(book);		
+		return this.repo.save(book);	
 	}
 	
 	

@@ -17,6 +17,7 @@ public class Book {
 	String genre;
 	Boolean checkedOut;
 	String returnDate;
+	String rating;
 	
 	public Book() {}
 	
