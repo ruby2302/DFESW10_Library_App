@@ -10,7 +10,6 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.entity.Book;
-import com.example.demo.entity.Cat;
 import com.example.demo.repo.BookRepo;
 
 @Service
