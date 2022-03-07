@@ -45,8 +45,9 @@ public class BookController {
 	}
 	
 	@GetMapping("/searchLibrary")
-	public ResponseEntity<List<Book>> searchlibrary(@RequestBody Example<Book> book) {
-		return new ResponseEntity<>(this.service.search(book), HttpStatus.ACCEPTED);
+	public ResponseEntity<List<Book>> searchlibrary(@RequestBody Book book) {
+		Example<Book> examplebook = Example.of(book);
+		return new ResponseEntity<>(this.service.search(examplebook), HttpStatus.ACCEPTED);
 	}
 	
 	
