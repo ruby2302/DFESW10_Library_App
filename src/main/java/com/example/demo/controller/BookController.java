@@ -58,7 +58,7 @@ public class BookController {
 	
 	@DeleteMapping("/deleteBook/{id}")
 	public ResponseEntity<Boolean> deletebook(@PathVariable Long id) {
-		if (this.service.delete(id)) {
+		if (!this.service.delete(id)) {
 			return new ResponseEntity<>(this.service.delete(id), HttpStatus.OK);
 		} else {
 			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
