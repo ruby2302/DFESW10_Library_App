@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,9 +19,9 @@ import com.example.demo.service.BookService;
 @RestController
 public class BookController {
 	
-	public BookService service;
+	private BookService service;
 	
-	
+	@Autowired
 	public BookController(BookService service) {
 		super();
 		this.service = service;
@@ -45,8 +46,9 @@ public class BookController {
 	}
 	
 	@GetMapping("/searchLibrary")
-	public ResponseEntity<List<Book>> searchlibrary(@RequestBody Example<Book> book) {
-		return new ResponseEntity<>(this.service.search(book), HttpStatus.ACCEPTED);
+	public ResponseEntity<List<Book>> searchlibrary(@RequestBody Book book) {
+		Example<Book> examplebook = Example.of(book);
+		return new ResponseEntity<>(this.service.search(examplebook), HttpStatus.ACCEPTED);
 	}
 	
 	
@@ -57,7 +59,7 @@ public class BookController {
 	
 	@DeleteMapping("/deleteBook/{id}")
 	public ResponseEntity<Boolean> deletebook(@PathVariable Long id) {
-		if (this.service.delete(id)) {
+		if (!this.service.delete(id)) {
 			return new ResponseEntity<>(this.service.delete(id), HttpStatus.OK);
 		} else {
 			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);

@@ -10,18 +10,18 @@ public class Book {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	Long id;
+	private Long id;
 	
-	String title;
-	String author;
-	String genre;
-	Boolean checkedOut;
-	String returnDate;
-	String rating;
+	private String title;
+	private String author;
+	private String genre;
+	private Boolean checkedOut;
+	private String returnDate;
+	private String rating;
 	
 	public Book() {}
 	
-	public Book(Long id, String title, String author, String genre, Boolean checkedOut, String returnDate) {
+	public Book(Long id, String title, String author, String genre, Boolean checkedOut, String returnDate, String rating) {
 		super();
 		this.id = id;
 		this.title = title;
@@ -83,6 +83,14 @@ public class Book {
 	public String toString() {
 		return "Book [id=" + id + ", title=" + title + ", author=" + author + ", genre=" + genre + ", checkedOut="
 				+ checkedOut + ", returnDate=" + returnDate + "]";
+	}
+
+	public String getRating() {
+		return rating;
+	}
+
+	public void setRating(String rating) {
+		this.rating = rating;
 	}
 	
 	
