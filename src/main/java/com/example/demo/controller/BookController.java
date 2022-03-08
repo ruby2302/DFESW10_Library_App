@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,9 +19,9 @@ import com.example.demo.service.BookService;
 @RestController
 public class BookController {
 	
-	public BookService service;
+	private BookService service;
 	
-	
+	@Autowired
 	public BookController(BookService service) {
 		super();
 		this.service = service;

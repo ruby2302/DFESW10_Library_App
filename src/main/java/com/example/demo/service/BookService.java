@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import javax.persistence.EntityNotFoundException;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
@@ -17,6 +18,7 @@ public class BookService {
 	
 	private BookRepo repo;
 
+	@Autowired    
 	public BookService(BookRepo repo) {
 		super();
 		this.repo = repo;
