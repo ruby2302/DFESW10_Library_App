@@ -29,6 +29,7 @@ public class Book {
 		this.genre = genre;
 		this.checkedOut = checkedOut;
 		this.returnDate = returnDate;
+		this.rating = rating;
 	}
 
 	public Long getId() {
@@ -79,18 +80,18 @@ public class Book {
 		this.returnDate = returnDate;
 	}
 
-	@Override
-	public String toString() {
-		return "Book [id=" + id + ", title=" + title + ", author=" + author + ", genre=" + genre + ", checkedOut="
-				+ checkedOut + ", returnDate=" + returnDate + "]";
-	}
-
 	public String getRating() {
 		return rating;
 	}
 
 	public void setRating(String rating) {
 		this.rating = rating;
+	}
+
+	@Override
+	public String toString() {
+		return "Book [id=" + id + ", title=" + title + ", author=" + author + ", genre=" + genre + ", checkedOut="
+				+ checkedOut + ", returnDate=" + returnDate + ", rating=" + rating + "]";
 	}
 	
 	
