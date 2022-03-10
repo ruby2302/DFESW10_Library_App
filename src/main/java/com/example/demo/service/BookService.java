@@ -50,7 +50,7 @@ public class BookService {
 		existingBook.setGenre(updatedbook.getGenre());
 		existingBook.setCheckedOut(updatedbook.getCheckedOut());
 		existingBook.setReturnDate(updatedbook.getReturnDate());
-		existingBook.setRating(updatedbook.getRating());
+		existingBook.setoutOf10(updatedbook.getoutOf10());
 		
 		return this.repo.save(existingBook);
 		

@@ -28,8 +28,8 @@ public class BookServiceUnitTest {
 	@Test
 	void testaddBook() {
 		//GIVEN
-		final Book inputBook = new Book(null, "The Little Book of Hygge", "Meik Wiking", "Lifestyle", false, "N/A", "7/10");
-		final Book returnBook = new Book(1L, "The Little Book of Hygge", "Meik Wiking", "Lifestyle", false, "N/A", "7/10");
+		final Book inputBook = new Book(null, "The Little Book of Hygge", "Meik Wiking", "Lifestyle", false, null, 7);
+		final Book returnBook = new Book(1L, "The Little Book of Hygge", "Meik Wiking", "Lifestyle", false, null, 7);
 		//WHEN
 		Mockito.when(this.repo.save(inputBook)).thenReturn(returnBook);
 		//THEN
@@ -54,7 +54,7 @@ public class BookServiceUnitTest {
 	void testfindbyId() {
 		//GIVEN
 		final Long id = 1L;
-		final Book foundbook = new Book(1L, "The Little Book of Hygge", "Meik Wiking", "Lifestyle", false, "N/A", "7/10");
+		final Book foundbook = new Book(1L, "The Little Book of Hygge", "Meik Wiking", "Lifestyle", false, null, 7);
 		//WHEN
 		Mockito.when(this.repo.findById(id)).thenReturn(Optional.of(foundbook));
 		//THEN
@@ -82,9 +82,9 @@ public class BookServiceUnitTest {
 	void testupdate() {
 		//GIVEN
 		Long id = 1L;
-		Book preUpdate = new Book(1L, "The Little Book of Hygge", "Meik Wiking", "Lifestyle", false, "N/A", "10/10");
-		Book bookupdate = new Book(1L, "The Little Book of Hygge", "Meik Wiking", "Lifestyle", false, "N/A", "4/10");
-		Book postUpdate = new Book(1L, "The Little Book of Hygge", "Meik Wiking", "Lifestyle", false, "N/A", "4/10");
+		Book preUpdate = new Book(1L, "The Little Book of Hygge", "Meik Wiking", "Lifestyle", false, null, 10);
+		Book bookupdate = new Book(1L, "The Little Book of Hygge", "Meik Wiking", "Lifestyle", false, null, 4);
+		Book postUpdate = new Book(1L, "The Little Book of Hygge", "Meik Wiking", "Lifestyle", false, null, 4);
 		
 		//WHEN
 		Mockito.when(this.repo.findById(id)).thenReturn(Optional.of(preUpdate));

@@ -1,5 +1,7 @@
 package com.example.demo.entity;
 
+
+import java.time.LocalDate;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -20,12 +22,14 @@ public class Book {
 	private Boolean checkedOut;
 	
 	@Column(name = "Return_Date")
-	private String returnDate;
-	private String rating;
+	private LocalDate returnDate;
+	
+	@Column(name = "out_Of_10")
+	private Integer outOf10;
 	
 	public Book() {}
 	
-	public Book(Long id, String title, String author, String genre, Boolean checkedOut, String returnDate, String rating) {
+	public Book(Long id, String title, String author, String genre, Boolean checkedOut, LocalDate returnDate, Integer outOf10) {
 		super();
 		this.id = id;
 		this.title = title;
@@ -33,7 +37,7 @@ public class Book {
 		this.genre = genre;
 		this.checkedOut = checkedOut;
 		this.returnDate = returnDate;
-		this.rating = rating;
+		this.outOf10 = outOf10;
 	}
 
 	public Long getId() {
@@ -76,26 +80,26 @@ public class Book {
 		this.checkedOut = checkedOut;
 	}
 
-	public String getReturnDate() {
+	public LocalDate getReturnDate() {
 		return returnDate;
 	}
 
-	public void setReturnDate(String returnDate) {
+	public void setReturnDate(LocalDate returnDate) {
 		this.returnDate = returnDate;
 	}
 
-	public String getRating() {
-		return rating;
+	public Integer getoutOf10() {
+		return outOf10;
 	}
 
-	public void setRating(String rating) {
-		this.rating = rating;
+	public void setoutOf10(Integer outOf10) {
+		this.outOf10 = outOf10;
 	}
 
 	@Override
 	public String toString() {
 		return "Book [id=" + id + ", title=" + title + ", author=" + author + ", genre=" + genre + ", checkedOut="
-				+ checkedOut + ", returnDate=" + returnDate + ", rating=" + rating + "]";
+				+ checkedOut + ", returnDate=" + returnDate + ", rating=" + outOf10 + "]";
 	}
 
 	@Override
@@ -106,7 +110,7 @@ public class Book {
 		result = prime * result + ((checkedOut == null) ? 0 : checkedOut.hashCode());
 		result = prime * result + ((genre == null) ? 0 : genre.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		result = prime * result + ((rating == null) ? 0 : rating.hashCode());
+		result = prime * result + ((outOf10 == null) ? 0 : outOf10.hashCode());
 		result = prime * result + ((returnDate == null) ? 0 : returnDate.hashCode());
 		result = prime * result + ((title == null) ? 0 : title.hashCode());
 		return result;
@@ -141,10 +145,10 @@ public class Book {
 				return false;
 		} else if (!id.equals(other.id))
 			return false;
-		if (rating == null) {
-			if (other.rating != null)
+		if (outOf10 == null) {
+			if (other.outOf10 != null)
 				return false;
-		} else if (!rating.equals(other.rating))
+		} else if (!outOf10.equals(other.outOf10))
 			return false;
 		if (returnDate == null) {
 			if (other.returnDate != null)

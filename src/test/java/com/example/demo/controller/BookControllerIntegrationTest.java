@@ -7,6 +7,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,10 +42,10 @@ public class BookControllerIntegrationTest {
 	@Test
 	void addbookTest() throws Exception {
 		//Given
-		Book newBook = new Book(null, "Let The Great World Spin", "Colum McCann", "Fiction", false, "N/A", "6/10");
+		Book newBook = new Book(null, "Let The Great World Spin", "Colum McCann", "Fiction", false, null, 6);
 		String newBookJSON = this.mapper.writeValueAsString(newBook);
 		
-		Book savedBook = new Book(4L,"Let The Great World Spin", "Colum McCann", "Fiction", false, "N/A", "6/10"); 
+		Book savedBook = new Book(4L,"Let The Great World Spin", "Colum McCann", "Fiction", false, null, 6); 
 		String savedBookJSON = this.mapper.writeValueAsString(savedBook);
 		
 		//When
@@ -61,9 +62,9 @@ public class BookControllerIntegrationTest {
 	void getallTest() throws Exception {
 		//Given
 		List<Book> booklist = new ArrayList<Book>();
-		booklist.add(new Book(1L, "H is for Hawk", "Helen Macdonald", "Fiction", false, "N/A", "8/10"));
-		booklist.add(new Book(2L, "The Last Kings of Sark", "Rosa Rankin-Gee", "Fiction", false, "N/A", "7/10"));
-		booklist.add(new Book(3L, "Wise Children", "Angela Carter", "Fiction", false, "N/A", "9/10"));
+		booklist.add(new Book(1L, "H is for Hawk", "Helen Macdonald", "Fiction", false, null, 8));
+		booklist.add(new Book(2L, "The Last Kings of Sark", "Rosa Rankin-Gee", "Fiction", false, null, 7));
+		booklist.add(new Book(3L, "Wise Children", "Angela Carter", "Fiction", false, null, 9));
 		
 		String booklistJSON = this.mapper.writeValueAsString(booklist);
 		
@@ -80,7 +81,7 @@ public class BookControllerIntegrationTest {
 	@Test
 	void findbyidtest() throws Exception {
 		//Given
-		Book savedBook = new Book(1L, "H is for Hawk", "Helen Macdonald", "Fiction", false, "N/A", "8/10");
+		Book savedBook = new Book(1L, "H is for Hawk", "Helen Macdonald", "Fiction", false, null, 8);
 		String savedBookJSON = this.mapper.writeValueAsString(savedBook);
 		
 		//When
@@ -103,7 +104,7 @@ public class BookControllerIntegrationTest {
 		System.out.println(searchJSON);
 		
 		List<Book> foundbooks = new ArrayList<Book>();
-		foundbooks.add(new Book(3L, "Wise Children", "Angela Carter", "Fiction", false, "N/A", "9/10"));
+		foundbooks.add(new Book(3L, "Wise Children", "Angela Carter", "Fiction", false, null, 9));
 		
 		String foundbooksJSON = this.mapper.writeValueAsString(foundbooks);
 		
@@ -120,7 +121,7 @@ public class BookControllerIntegrationTest {
 	@Test
 	void updateBookTest() throws Exception {
 		//Given
-		Book newinfo = new Book(3L, "Wise Children", "Angela Carter", "Fiction", true, "15/03/22", "9/10");
+		Book newinfo = new Book(3L, "Wise Children", "Angela Carter", "Fiction", true, LocalDate.of(15, 03, 22), 9);
 		String newinfoJSON = this.mapper.writeValueAsString(newinfo);
 		
 		//When

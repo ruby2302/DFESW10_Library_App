@@ -5,7 +5,7 @@ title varchar(255),
 author varchar(255), 
 genre varchar(255), 
 checked_Out boolean,
-return_Date varchar(255),
-rating varchar(255),
+return_Date date,
+out_Of_10 integer,
 primary key (id)
 );
