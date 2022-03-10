@@ -51,6 +51,11 @@ public class BookController {
 		return new ResponseEntity<>(this.service.search(examplebook), HttpStatus.ACCEPTED);
 	}
 	
+	@GetMapping("/findByRating/{outOf10}")
+	public ResponseEntity<List<Book>> findByRating(@PathVariable Integer outOf10) {
+		return new ResponseEntity<>(this.service.findByRating(outOf10), HttpStatus.ACCEPTED);
+		}
+	
 	
 	@PutMapping("/updateBook/{id}")
 	public ResponseEntity<Book> updatebook(@PathVariable Long id, @RequestBody Book updatedbook) {

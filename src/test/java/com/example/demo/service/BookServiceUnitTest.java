@@ -64,6 +64,12 @@ public class BookServiceUnitTest {
 	}
 	
 	@Test
+	void testfindByRating() {
+		//Given
+		
+	}
+	
+	@Test
 	void testsearch() {
 		//GIVEN
 		final Book book = new Book(null, null, "Meik Wiking", null, null, null, null);

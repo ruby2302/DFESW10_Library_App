@@ -1,5 +1,7 @@
 DFESW10 Final Project - Ruby Embley
 
+Link to Jira Board: https://rubyembley.atlassian.net/jira/software/projects/DFP/boards/2
+
 WHY ARE WE DOING THIS?
 
 This is my final project as part of the 9-week Software Development Skills bootcamp run by QA and the Department of Education. The project brings together all the skills we covered as part of the training, including:
@@ -32,7 +34,7 @@ It took me a while to get used to using feature branches on Git Hub, I failed to
 
 I'd also like to have split my User Stories on Jira up in a more intuitive way. I don't feel they reflect the way I actually worked, which added to some of my mix-ups on the project management side. But again I've learned from this
  
-Unfortunately I didn't manage to produce an integration test for my 'searchLibrary' method. The method was passing its unit tests and works as it was designed to, but it is failing the integration test. I wasn't able to find a solution for this in time, so I will look at it again in future revisions of the project.
+Unfortunately I didn't manage to produce an integration test for my 'searchLibrary' method. The method was passing its unit tests and works as it was designed to, but it is failing the integration test. I wasn't able to find a solution for this in time for the deadline, so I will look at it again in future revisions of the project.
 
 
 POSSIBLE IMPROVEMENTS FOR FUTURE REVISIONS OF THE PROJECT:

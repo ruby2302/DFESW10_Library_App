@@ -42,6 +42,10 @@ public class BookService {
 		
 	}
 	
+	public List<Book> findByRating(Integer outOf10) {
+		return this.repo.findBookByoutOf10GreaterThan(outOf10);
+	}
+		
 	public Book update(Long id, Book updatedbook) {
 		Book existingBook = this.repo.findById(id).orElseThrow(EntityNotFoundException::new);
 		
