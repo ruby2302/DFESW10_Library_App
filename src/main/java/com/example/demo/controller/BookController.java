@@ -40,7 +40,7 @@ public class BookController {
 	}
 	
 	@GetMapping("/findById/{id}")
-	public ResponseEntity<Book> findybyid(@PathVariable Long id) {
+	public ResponseEntity<Book> findbyid(@PathVariable Long id) {
 		return new ResponseEntity<>(this.service.findbyId(id), HttpStatus.ACCEPTED);
 		
 	}
@@ -59,10 +59,12 @@ public class BookController {
 	
 	@DeleteMapping("/deleteBook/{id}")
 	public ResponseEntity<Boolean> deletebook(@PathVariable Long id) {
-		if (!this.service.delete(id)) {
-			return new ResponseEntity<>(this.service.delete(id), HttpStatus.OK);
+		boolean hasDeleted = this.service.delete(id);
+		
+		if (hasDeleted) {
+			return new ResponseEntity<>(hasDeleted, HttpStatus.ACCEPTED);
 		} else {
-			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+			return new ResponseEntity<>(hasDeleted, HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}
 

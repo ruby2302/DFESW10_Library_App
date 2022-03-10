@@ -41,7 +41,7 @@ public class BookServiceUnitTest {
 	@Test
 	void testgetAll() {
 		//GIVEN
-		final List<Book> booklist = new ArrayList<>();
+		final List<Book> booklist = new ArrayList<Book>();
 		//WHEN
 		Mockito.when(this.repo.findAll()).thenReturn(booklist);
 		//THEN

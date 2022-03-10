@@ -1,5 +1,6 @@
 package com.example.demo.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,7 +16,10 @@ public class Book {
 	private String title;
 	private String author;
 	private String genre;
+	@Column(name = "Checked_Out")
 	private Boolean checkedOut;
+	
+	@Column(name = "Return_Date")
 	private String returnDate;
 	private String rating;
 	
