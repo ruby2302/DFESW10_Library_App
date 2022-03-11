@@ -9,8 +9,8 @@
 [9. Delete method in Postman.](https://github.com/ruby2302/DFESW10_Library_App/blob/documentation/Documentation/Screenshots/Screenshot%202022-03-11%20at%2012.00.21.png)
 [10. Index 13 deleted in database.](https://github.com/ruby2302/DFESW10_Library_App/blob/documentation/Documentation/Screenshots/Image%2011-03-2022%20at%2012.00.jpg)
 [11. Find by minimum rating in Postman.](https://github.com/ruby2302/DFESW10_Library_App/blob/documentation/Documentation/Screenshots/Image%2011-03-2022%20at%2012.01.jpg)
-[12. Evidence of unit tests passing.]()
-[13. Evidence of controller tests passing.]()
+[12. Evidence of unit tests passing.](https://github.com/ruby2302/DFESW10_Library_App/blob/documentation/Documentation/Screenshots/Screenshot%202022-03-11%20at%2014.41.54.png)
+[13. Evidence of controller tests passing.](https://github.com/ruby2302/DFESW10_Library_App/blob/documentation/Documentation/Screenshots/Screenshot%202022-03-11%20at%2014.42.25.png)
 [14. Evidence of test coverage.]()
 
 
