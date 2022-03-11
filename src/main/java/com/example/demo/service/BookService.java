@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import javax.persistence.EntityNotFoundException;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
@@ -17,6 +18,7 @@ public class BookService {
 	
 	private BookRepo repo;
 
+	@Autowired    
 	public BookService(BookRepo repo) {
 		super();
 		this.repo = repo;
@@ -40,6 +42,10 @@ public class BookService {
 		
 	}
 	
+	public List<Book> findByRating(Integer outOf10) {
+		return this.repo.findBookByoutOf10GreaterThan(outOf10);
+	}
+		
 	public Book update(Long id, Book updatedbook) {
 		Book existingBook = this.repo.findById(id).orElseThrow(EntityNotFoundException::new);
 		
@@ -48,6 +54,7 @@ public class BookService {
 		existingBook.setGenre(updatedbook.getGenre());
 		existingBook.setCheckedOut(updatedbook.getCheckedOut());
 		existingBook.setReturnDate(updatedbook.getReturnDate());
+		existingBook.setoutOf10(updatedbook.getoutOf10());
 		
 		return this.repo.save(existingBook);
 		

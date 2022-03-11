@@ -1,0 +1,3 @@
+insert into book (title, author, genre, checked_Out, return_Date, out_Of_10) values ('H is for Hawk', 'Helen Macdonald', 'Fiction', false, null, 8);
+insert into book (title, author, genre, checked_Out, return_Date, out_Of_10) values ('The Last Kings of Sark', 'Rosa Rankin-Gee', 'Fiction', false, null, 7);
+insert into book (title, author, genre, checked_Out, return_Date, out_Of_10) values ('Wise Children', 'Angela Carter', 'Fiction', false, null, 9);
