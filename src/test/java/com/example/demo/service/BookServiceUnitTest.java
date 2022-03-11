@@ -23,7 +23,7 @@ public class BookServiceUnitTest {
 	private BookService service;
 	
 	@MockBean
-	private BookRepo repo;
+	private BookRepo repo;    
 	
 	@Test
 	void testaddBook() {
@@ -120,6 +120,7 @@ public class BookServiceUnitTest {
 		
 		//THEN
 		Assertions.assertThat(this.service.delete(id)).isEqualTo(true);
+
 		
 		//VERIFY
 		Mockito.verify(this.repo, Mockito.times(1)).existsById(id);

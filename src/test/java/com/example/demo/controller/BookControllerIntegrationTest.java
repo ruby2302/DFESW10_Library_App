@@ -152,7 +152,7 @@ public class BookControllerIntegrationTest {
 		//Then
 		this.mvc.perform(request).andExpect(responseStatus).andExpect(responseContent);			
 		
-	}
+	}   
 	
 	@Test
 	void deletebookTest() throws Exception {
