@@ -1,4 +1,4 @@
-[1. Starting point of the database, pre-populated by me](https://github.com/ruby2302/DFESW10_Library_App/blob/documentation/Documentation/Screenshots/Image%2010-03-2022%20at%2012.45.jpg)
+![1. Starting point of the database, pre-populated by me](https://github.com/ruby2302/DFESW10_Library_App/blob/documentation/Documentation/Screenshots/Image%2010-03-2022%20at%2012.45.jpg)
 
 [2. 'Add Book' method in Postman.](https://github.com/ruby2302/DFESW10_Library_App/blob/documentation/Documentation/Screenshots/Image%2011-03-2022%20at%2011.52.jpg)
 
