@@ -25,7 +25,7 @@ public class BookServiceUnitTest {
 	@MockBean
 	private BookRepo repo;    
 	
-	@Test
+	@Test   
 	void testaddBook() {
 		//GIVEN
 		final Book inputBook = new Book(null, "The Little Book of Hygge", "Meik Wiking", "Lifestyle", false, null, 7);
