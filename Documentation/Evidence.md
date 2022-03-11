@@ -24,6 +24,6 @@
 
 [13. Evidence of controller tests passing.](https://github.com/ruby2302/DFESW10_Library_App/blob/documentation/Documentation/Screenshots/Screenshot%202022-03-11%20at%2014.42.25.png)
 
-[14. Evidence of test coverage.](https://github.com/ruby2302/DFESW10_Library_App/blob/documentation/Documentation/Screenshots/Screenshot%202022-03-11%20at%2015.23.13.png)
+[14. Evidence of test coverage.](https://github.com/ruby2302/DFESW10_Library_App/blob/documentation/Documentation/Screenshots/Screenshot%202022-03-11%20at%2016.08.09.png)
 
 
