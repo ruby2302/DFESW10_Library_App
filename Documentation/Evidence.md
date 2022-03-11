@@ -11,6 +11,6 @@
 [11. Find by minimum rating in Postman.](https://github.com/ruby2302/DFESW10_Library_App/blob/documentation/Documentation/Screenshots/Image%2011-03-2022%20at%2012.01.jpg)
 [12. Evidence of unit tests passing.](https://github.com/ruby2302/DFESW10_Library_App/blob/documentation/Documentation/Screenshots/Screenshot%202022-03-11%20at%2014.41.54.png)
 [13. Evidence of controller tests passing.](https://github.com/ruby2302/DFESW10_Library_App/blob/documentation/Documentation/Screenshots/Screenshot%202022-03-11%20at%2014.42.25.png)
-[14. Evidence of test coverage.]()
+[14. Evidence of test coverage.](https://github.com/ruby2302/DFESW10_Library_App/blob/documentation/Documentation/Screenshots/Screenshot%202022-03-11%20at%2015.23.13.png)
 
 
