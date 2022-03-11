@@ -99,7 +99,7 @@ public class Book {
 	@Override
 	public String toString() {
 		return "Book [id=" + id + ", title=" + title + ", author=" + author + ", genre=" + genre + ", checkedOut="
-				+ checkedOut + ", returnDate=" + returnDate + ", rating=" + outOf10 + "]";
+				+ checkedOut + ", returnDate=" + returnDate + ", outOf10=" + outOf10 + "]";
 	}
 
 	@Override
