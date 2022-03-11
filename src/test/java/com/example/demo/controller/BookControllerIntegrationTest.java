@@ -23,7 +23,6 @@ import org.springframework.test.context.jdbc.Sql.ExecutionPhase;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.RequestBuilder;
 import org.springframework.test.web.servlet.ResultMatcher;
-
 import com.example.demo.entity.Book;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -96,6 +95,26 @@ public class BookControllerIntegrationTest {
 	}
 	
 	@Test
+	void findyByRatingTest() throws Exception {
+		//Given
+		List<Book> foundbooks = new ArrayList<Book>();
+		foundbooks.add(new Book(1L, "H is for Hawk", "Helen Macdonald", "Fiction", false, null, 8));
+		foundbooks.add(new Book(3L, "Wise Children", "Angela Carter", "Fiction", false, null, 9));
+		String foundbooksJSON = this.mapper.writeValueAsString(foundbooks);
+		
+		//When
+		RequestBuilder request = get("/findByRating/7");
+		
+		ResultMatcher responseStatus = status().isAccepted();
+		ResultMatcher responseContent = content().json(foundbooksJSON);
+		
+		//Then
+		this.mvc.perform(request).andExpect(responseStatus).andExpect(responseContent);
+		
+		
+	}
+	
+	@Test
 	void searchLibraryTest() throws Exception {
 		//Given
 		Book searchvariable = new Book(null, null, "Angela Carter", null, null, null, null);
@@ -140,6 +159,8 @@ public class BookControllerIntegrationTest {
 		this.mvc.perform(delete("/deleteBook/3"))
 		.andExpect(status().isAccepted());
 	}	
+	
+	
 		
 	
 }

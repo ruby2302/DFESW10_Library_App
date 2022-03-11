@@ -43,4 +43,5 @@ I'd like to develop an 'update' method where you don't have to pass in the entir
 
 I'd like to make the Library database relational by adding another table that keeps track of stock levels e.g number of copies per title.
 
-I'd like to make a custom query that allows the user to search for books that have received a rating over a certain number, e.g more than 5/10.
+I will add exception handling into the project, to handle typos in requests etc.
+

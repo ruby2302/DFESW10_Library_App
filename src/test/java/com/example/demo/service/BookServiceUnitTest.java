@@ -66,7 +66,13 @@ public class BookServiceUnitTest {
 	@Test
 	void testfindByRating() {
 		//Given
-		
+		final Integer outOf10 = 7;
+		final List<Book> foundbooks = new ArrayList<Book>();
+		//WHEN
+		Mockito.when(this.repo.findBookByoutOf10GreaterThan(outOf10)).thenReturn(foundbooks);
+		Assertions.assertThat(this.service.findByRating(outOf10)).isEqualTo(foundbooks);
+		//VERIFY
+		Mockito.verify(this.repo, Mockito.times(1)).findBookByoutOf10GreaterThan(outOf10);
 	}
 	
 	@Test
