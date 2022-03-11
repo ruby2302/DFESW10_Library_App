@@ -1,2 +1,2 @@
 1. Starting point of the database, pre-populated by me:
-[Starting point of the database, pre-populated by me](Documentation/Screenshots/Image 10-03-2022 at 12.45.jpg)
+[Starting point of the database, pre-populated by me](https://github.com/ruby2302/DFESW10_Library_App/blob/documentation/Documentation/Screenshots/Image%2010-03-2022%20at%2012.45.jpg)
